@@ -33,6 +33,10 @@ public class Client {
 	}
 
 
+	/**
+	 * Add a deposit to the current customer and create a new operation for this customer
+	 * @param float depositValue
+	 */
 	public void deposit(float depositValue) {
 
 		addNewOperation(Operation.OPERATION_TYPE_DEPOSIT, depositValue);
@@ -45,6 +49,10 @@ public class Client {
 	}
 
 
+	/**
+	 * Make a withdrawal for the current customer  and create a new operation for this customer
+	 * @param withdrawlValue
+	 */
 	public void makeWithdrawal(float withdrawlValue) {
 		if(this.balance > 0 && this.balance >= withdrawlValue) {
 			
@@ -58,6 +66,11 @@ public class Client {
 		return this.name;
 	}
 	
+	/**
+	 * Add a new operation for this customer.
+	 * @param String operationType
+	 * @param float withdrawlValue
+	 */
 	private void addNewOperation(String operationType, float withdrawlValue) {
 
 		Operation operation = new Operation();

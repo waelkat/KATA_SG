@@ -1,5 +1,10 @@
 package com.sg.bankaccount;
 
+/**
+ * An Exception to throw in case the current customer dones'nt have enough balance to make the withdrawal
+ * @author DELL
+ *
+ */
 public class CantMakeWithdrawalException extends Exception {
 
 	/**

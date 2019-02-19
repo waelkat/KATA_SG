@@ -63,6 +63,10 @@ public class BankServiceImp implements BankService {
 	public String getClientHistory(int clientID) {
 		Client client = getClientWithID(clientID);
 		
+		if(client == null) {
+			throw new IllegalArgumentException("Client with ID " + clientID + " Not found.");
+		}
+		
 		StringBuilder clientHistory = new StringBuilder();
 		client.getOperations().stream().forEach(operation -> clientHistory.append(operation.toString()));
 		
