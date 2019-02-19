@@ -1,7 +1,8 @@
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import com.sg.bankaccount.model.Client;
 
 class ClientTest {
 
@@ -11,7 +12,7 @@ class ClientTest {
 
 		assertEquals(client.getBalance(), 0);
 		assertEquals(client.getClientName(), "Wael");
-		assertEquals(client.getOperations.size(), 0);
+		assertEquals(client.getOperations().size(), 0);
 
 	}
 
@@ -21,7 +22,7 @@ class ClientTest {
 
 		assertEquals(client.getBalance(), 20f);
 		assertEquals(client.getClientName(), "Wael");
-		assertEquals(client.getOperations.size(), 0);
+		assertEquals(client.getOperations().size(), 0);
 
 	}
 	
