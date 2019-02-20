@@ -10,8 +10,8 @@ public class Operation {
 	private String type;
 	private LocalDateTime creationDate;
 	
-	public static String OPERATION_TYPE_WITHDRAWAL = "WITHDRAWAL";
-	public static String OPERATION_TYPE_DEPOSIT = "DEPOSIT";
+	public static final String OPERATION_TYPE_WITHDRAWAL = "WITHDRAWAL";
+	public static final String OPERATION_TYPE_DEPOSIT = "DEPOSIT";
 	
 	public Operation() {
 		this.creationDate = LocalDateTime.now();
@@ -20,7 +20,7 @@ public class Operation {
 	@Override
 	public String toString() {
 		String toString = "";
-		Float newBalance = 0f;
+		Float newBalance;
 		
 		if(getType().equals(OPERATION_TYPE_WITHDRAWAL)) {
 			toString += "Withdraw an amount of ";
